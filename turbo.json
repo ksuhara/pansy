@@ -1,0 +1,33 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**"
+      ]
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "dependsOn": [
+        "umi-sdk#build",
+        "@umi-ag/sui-sdk#build",
+        "@umi-ag/sui-coin-list#build"
+      ]
+    },
+    "up": {
+      "cache": false,
+      "dependsOn": [
+        "umi-ui#up",
+        "umi-sdk#up",
+        "@umi-ag/sui-sdk#up",
+        "@umi-ag/sui-coin-list#up"
+      ]
+    }
+  }
+}

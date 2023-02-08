@@ -1,0 +1,131 @@
+.border-lightdark {
+    @apply border-gray-200 dark:border-sea-500;
+}
+
+.bg-lightdark-700 {
+    @apply bg-white dark:bg-sea-700;
+}
+
+.box-lightdark-700 {
+    @apply bg-white dark:bg-sea-700 border border-gray-200 dark:border-sea-500 rounded-xl;
+}
+
+.box-lightdark-800 {
+    @apply bg-white dark:bg-sea-700 border border-gray-200 dark:border-sea-500 rounded-3xl;
+}
+
+.bg-lightdark-input {
+    @apply bg-slate-50 dark:bg-sea-800;
+}
+
+.border-lightdark-input {
+    @apply border-slate-200 dark:border-sea-700;
+}
+
+.header-balance-view {
+    @apply text-black dark:text-white flex items-center gap-3 text-md md:text-lg font-medium mb-3;
+}
+
+.box-balance-view-700 {
+    @apply bg-white dark:bg-sea-700 border border-gray-200 dark:border-sea-500 rounded-xl;
+    @apply text-gray-900 dark:text-gray-300 px-3 py-4 md:p-5;
+}
+
+.wallet-button {
+    @apply bg-green-300 hover:bg-green-400 rounded-full transition duration-200;
+}
+
+.wallet-button-connected {
+    @apply text-black dark:text-white bg-white dark:bg-sea-700;
+    @apply hover:bg-gray-100 hover:dark:bg-sea-500/70;
+    @apply rounded-full transition duration-200;
+}
+
+.symbol-pair-button {
+    @apply bg-white hover:bg-gray-100 text-gray-800 border border-gray-200 dark:bg-sea-700 dark:hover:bg-sea-500 dark:hover:text-white dark:border-sea-700 px-2 py-1 rounded-full flex justify-cener items-center gap-1 transition duration-200;
+}
+
+$selected-price-quote-bg-dark: linear-gradient(135deg, hsl(188deg 56% 16%) 0%, hsl(192deg 54% 17%) 8%, hsl(196deg 52% 17%) 17%, hsl(200deg 51% 18%) 25%, hsl(204deg 49% 19%) 33%, hsl(208deg 48% 20%) 42%, hsl(212deg 46% 21%) 50%, hsl(216deg 45% 21%) 58%, hsl(220deg 43% 22%) 67%, hsl(224deg 42% 23%) 75%, hsl(228deg 41% 24%) 83%, hsl(232deg 39% 25%) 92%, hsl(236deg 38% 26%) 100%);
+$_greenblue-grad: linear-gradient(135deg, hsl(156, 73%, 67%) 0%, hsl(164deg 73% 63%) 25%, hsl(171deg 74% 58%) 42%, hsl(176deg 75% 52%) 55%, hsl(180deg 100% 44%) 65%, hsl(183deg 100% 45%) 73%, hsl(186deg 100% 47%) 80%, hsl(188deg 100% 48%) 86%, hsl(190deg 100% 49%) 92%, hsl(192deg 100% 50%) 100%);
+$greenblue-grad: linear-gradient(45deg,
+        hsl(158deg 90% 45%) 0%,
+        hsl(164deg 100% 42%) 17%,
+        hsl(169deg 100% 41%) 29%,
+        hsl(173deg 100% 40%) 38%,
+        hsl(177deg 100% 39%) 46%,
+        hsl(181deg 100% 38%) 54%,
+        hsl(184deg 100% 39%) 62%,
+        hsl(187deg 100% 39%) 71%,
+        hsl(189deg 100% 39%) 82%,
+        hsl(191deg 87% 41%) 100%);
+
+.dark .selected-price-quote {
+    background: $selected-price-quote-bg-dark padding-box, $greenblue-grad border-box;
+    border: 3px solid transparent;
+    @apply rounded-xl;
+}
+
+$selected-price-quote-bg-light: linear-gradient(90deg, rgb(207, 250, 202) 0%, rgb(194, 255, 240) 50%, rgb(204, 243, 255) 100%);
+
+.selected-price-quote {
+    // background: $selected-price-quote-bg padding-box, $greenblue-grad border-box;
+    background: $selected-price-quote-bg-light padding-box, $greenblue-grad border-box;
+    border: 3px solid transparent;
+    @apply rounded-xl;
+}
+
+.dark .view-demo-button {
+    background: $selected-price-quote-bg-dark padding-box, $greenblue-grad border-box;
+    border: 1px solid transparent;
+    @apply rounded-xl;
+}
+
+.view-demo-button {
+    background: $selected-price-quote-bg-light padding-box, $greenblue-grad border-box;
+    border: 1px solid transparent;
+    @apply rounded-xl;
+}
+
+// $givaway--bg: linear-gradient( 135deg, hsl(9deg 11% 23%) 0%, hsl(19deg 12% 22%) 18%, hsl(29deg 12% 22%) 29%, hsl(40deg 11% 21%) 38%, hsl(58deg 9% 21%) 45%, hsl(85deg 8% 21%) 52%, hsl(120deg 7% 22%) 59%, hsl(150deg 10% 22%) 68%, hsl(167deg 13% 21%) 80%, hsl(180deg 14% 21%) 100%);
+$pinkblue-grad: linear-gradient(135deg, hsl(340deg 81% 77%) 1%, hsl(323deg 70% 77%) 32%, hsl(293deg 58% 78%) 43%, hsl(259deg 93% 84%) 51%, hsl(227deg 100% 83%) 58%, hsl(207deg 100% 76%) 63%, hsl(196deg 100% 68%) 69%, hsl(189deg 100% 57%) 75%, hsl(186deg 100% 50%) 82%, hsl(180deg 84% 52%) 100%);
+
+.bg-pinkblue-grad {
+    background: $pinkblue-grad;
+}
+
+kk .text-greenblue-light {
+    background-image: $selected-price-quote-bg-light;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.text-greenblue-dark {
+    background-image: $greenblue-grad;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.bg-greenblue-light {
+    background: $selected-price-quote-bg-light;
+    border: 1px solid transparent;
+}
+
+.bg-greenblue-dark {
+    background: $greenblue-grad;
+    border: 1px solid transparent;
+}
+
+.text-pinkblue-grad {
+    background-image: $pinkblue-grad;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}

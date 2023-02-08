@@ -1,0 +1,10 @@
+[tasks."install:dev"]
+script = '''
+npm i -g wrangler@latest
+'''
+
+[tasks.gen-icons]
+script = '''
+npx icon-gen -i src/assets/logo.png -o public/ --ico-name logo
+cp public/favicon.ico .
+'''

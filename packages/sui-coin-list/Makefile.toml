@@ -1,0 +1,55 @@
+
+
+[tasks."build:module"]
+script = '''
+sui move build
+'''
+
+[tasks."test:module"]
+script = '''
+sui move test
+'''
+
+[tasks."deploy:devnet"]
+dependencies = [
+  "build:module", # "test:module",
+]
+script = '''
+sui client publish --gas-budget 30000
+'''
+
+[tasks."alice:transfer"]
+script = '''
+sui client call \
+  --function transfer \
+  --module sui \
+  --package 0x2 \
+  --args \
+    0x471c8e241d0473c34753461529b70f9c4ed3151b \
+    0x3cbf06e9997b3864e3baad6bc0f0ef8ec423cd75 \
+  --gas-budget 1000
+'''
+
+[tasks."alice:mint:BTC"]
+script = '''
+sui client call \
+  --package 0x4e58cae8dca973030dd84459bdf9cd70e65dcc80 \
+  --module devnet_btc \
+  --function mint \
+  --args \
+    0x6ee60687c8d002ddc8efda046099f6dd96c9dc8c \
+    100 \
+  --gas-budget 1000
+'''
+
+[tasks."alice:mint:ETH"]
+script = '''
+sui client call \
+  --package 0x4e58cae8dca973030dd84459bdf9cd70e65dcc80 \
+  --module devnet_eth \
+  --function mint \
+  --args \
+    0x5f43d1573427e99b5469b19aa1fa97f5ba133090 \
+    100 \
+  --gas-budget 1000
+'''

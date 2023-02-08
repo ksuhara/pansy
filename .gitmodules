@@ -1,0 +1,6 @@
+[submodule "packages/sui-sdk"]
+	path = packages/sui-sdk
+	url = https://github.com/umi-ag/sui-sdk
+[submodule "packages/sui-coin-list"]
+	path = packages/sui-coin-list
+	url = https://github.com/umi-ag/sui-coin-list
