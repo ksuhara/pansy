@@ -11,6 +11,7 @@
 <h1>Pansy</h1>
 </div>
 
+- DEMO pages: https://pansy.pages.dev/profile/0x26f51d6be165dd192f98ee959002bf208b2dabcd6e051c19f19009c8809df742
 
 Pansy is an asset profiler for the Aptos ecosystem.
 Pansy summarizes and visualizes on-chain assets and helps users get a complete picture of their on-chain assets.
