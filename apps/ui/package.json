@@ -1,6 +1,4 @@
 {
-  "name": "umi.ag",
-  "description": "",
   "scripts": {
     "dev": "wrangler pages dev -- vite --host 0.0.0.0",
     "vite": "vite",
@@ -11,7 +9,6 @@
     "lint": "eslint ./src --fix -c .eslintrc.js --ext js,ts,jsx,tsx --ignore-pattern='!.*'",
     "console": "ts-node"
   },
-  "license": "MIT",
   "dependencies": {
     "@animeswap.org/v1-sdk": "^1.2.1",
     "@felte/reporter-solid": "^1.2.4",
